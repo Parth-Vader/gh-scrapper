@@ -29,7 +29,7 @@ def _search_location(soup, max_users, params):
     number_of_pages = min(max_pages, search_pages)
 
     users = []
-    for i in range(1, number_of_pages):
+    for i in range(1, int(number_of_pages)):
         users.extend(search_page_users(i, params=params))
 
     return users
